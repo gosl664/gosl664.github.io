@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+.container {
+    /* 그리드 시스템 */
+    position: relative;
+    width: 100%;
+    /* 모바일 */
+    max-width: 1024px;
+    padding: 0 15px;
+    /* PC */
+    margin: 0 auto;
+    /* background-color: orange; */
+}
+
+/* **** header **** */
+header {
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    background-color: black;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    padding-top: 10px;
+
+}
+
+/*  main-menu */
+.main-menu {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+}
+
+.main-menu>.gnb>li>a {
+    width: 100%;
+    color: white;
+    background-color: rgb(97, 44, 6);
+    padding: 15px;
+    font-size: 18px;
+}
+
+.main-menu>.gnb>li:nth-child(2)>a {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* mobile-btn */
+.mobile-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    /* background-color: blue; */
+}
+
+.mobile-btn>span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+
+}
+
+.mobile-btn>span:nth-child(2) {
+    margin: 10px 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-menu {
+        position: static;
+        display: block;
+
+    }
+
+    .main-menu>.gnb {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 0;
+        width: 400px;
+        height: 70px;
+        /* background-color: blue; */
+    }
+
+    .main-menu>.gnb>li>a {
+        width: 100%;
+        color: white;
+        background-color: transparent;
+        /* 배경 투명 */
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .main-menu>.gnb>li:nth-child(2)>a {
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+}
+
+
+
+/* **** main **** */
+.main-img>h2 {
+    font-size: 0;
+}
+
+.main-img>img {
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-img {
+        display: flex;
+        align-items: center;
+        height: 500px;
+        overflow: hidden;
+    }
+}
+
+/* **** contents **** */
+.contents>h2 {
+    font-size: 0;
+}
+
+.contents img {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .contents img {
+        display: block;
+    }
+}
+
+.intro-map-choice>div {
+    height: 200px;
+    padding: 20px 0;
+    background-color: bisque;
+}
+
+.intro-map-choice>div:nth-child(2) {
+    background-color: gray;
+}
+
+.intro-map-choice h3 {
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.intro-map-choice p {
+    font-size: 18px;
+}
+
+.intro-map-choice>.choice {
+    height: auto;
+}
+
+.intro-map-choice>.choice h4 {
+    color: skyblue;
+    font-size: 18px;
+}
+
+.intro-map-choice>.choice ol {
+    margin-left: 10px;
+}
+
+.intro-map-choice>.choice ol>li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+@media screen and (min-width: 760px) {
+    .intro-map-choice {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .intro-map-choice>div {
+        width: 50%;
+        background-color: transparent;
+        border: 1px dotted gray;
+    }
+
+
+    .intro-map-choice>div:last-child {
+        width: 100%;
+    }
+
+    .intro-map-choice>div:nth-child(2) {
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .intro-map-choice {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .intro-map-choice>div {
+        width: 100%;
+        height: auto;
+        background-color: bisque;
+        border: 0;
+    }
+
+
+    .intro-map-choice>div:last-child {
+        width: 100%;
+    }
+
+    .intro-map-choice>div:nth-child(2) {
+        background-color: gray;
+    }
+
+    .intro-map-choice img {
+        float: left;
+        margin-right: 30px;
+    }
+
+    .intro-map-choice .choice img {
+        float: right;
+        border-radius: 50%;
+    }
+
+    .intro-map-choice .choice ol {
+        margin-top: 20px;
+    }
+}
+
+/* **** footer **** */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #000;
+}
+
+footer>h2 {
+    color: #fff;
+    font-size: 20px;
+}
